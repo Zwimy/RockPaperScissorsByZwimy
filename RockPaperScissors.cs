@@ -7,7 +7,7 @@ namespace Rock_Paper_Scissors
         static void Main(string[] args)
         {
             Console.WriteLine("Do you want to play a game?");
-            string request = Console.ReadLine();
+            string request = Console.ReadLine()!;
             bool playGame = true;
             int gamesPlayed = 0;
             int gamesWon = 0;
@@ -28,7 +28,7 @@ namespace Rock_Paper_Scissors
                 const string scissors = "scissors";
                 Thread.Sleep(500);
                 Console.Write("Choose [r]ock, [p]aper or [s]cissors: ");
-                string playerSelection = Console.ReadLine();
+                string playerSelection = Console.ReadLine()!;
                 gamesPlayed++;
                 if (playerSelection == "r" || playerSelection == "rock")
                 {
@@ -83,7 +83,7 @@ namespace Rock_Paper_Scissors
                 }
                 Thread.Sleep(500);
                 Console.WriteLine("Do you want to play again?");
-                request = Console.ReadLine();
+                request = Console.ReadLine()!;
                 Thread.Sleep(1000);
             }
         }
