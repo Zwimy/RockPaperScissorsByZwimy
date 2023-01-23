@@ -18,6 +18,9 @@ namespace Rock_Paper_Scissors
                 if (request == "n" || request == "no" || request == "N" || request == "NO")
                 {
                     playGame = false;
+                    Thread.Sleep(500);
+                    Console.WriteLine($"You played {gamesPlayed} and won {gamesWon} game(s).\nGoodbye! ");
+                    Thread.Sleep(2000);
                     break;
                 }
                 const string rock = "rock";
@@ -81,9 +84,8 @@ namespace Rock_Paper_Scissors
                 Thread.Sleep(500);
                 Console.WriteLine("Do you want to play again?");
                 request = Console.ReadLine();
+                Thread.Sleep(1000);
             }
-            Thread.Sleep(500);
-            Console.WriteLine($"You played {gamesPlayed} and won {gamesWon} game(s).\nGoodbye! ");
         }
     }
 }
